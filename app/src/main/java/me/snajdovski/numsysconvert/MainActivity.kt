@@ -1,8 +1,6 @@
 package me.snajdovski.numsysconvert
 
-import android.os.Build
 import android.os.Bundle
-import android.view.WindowManager
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.ExperimentalAnimationApi
@@ -12,18 +10,18 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.*
-import androidx.compose.runtime.*
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.ClipboardManager
-import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import me.snajdovski.numsysconvert.ui.theme.КонвертерTheme
@@ -38,7 +36,6 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             КонвертерTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
@@ -142,7 +139,7 @@ class MainActivity : ComponentActivity() {
                                 amount = it
                             },
                             label = {
-                                Text(text = "Внесете ја вредноста",color = Color.White)
+                                Text(text = "Внесете ја вредноста", color = Color.White)
                             },
                             placeholder = {
                                 Text(text = "0")
@@ -152,7 +149,7 @@ class MainActivity : ComponentActivity() {
                                 keyboardType = KeyboardType.Text,
                                 imeAction = ImeAction.Done
 
-                             ),
+                            ),
                             keyboardActions = KeyboardActions(
                                 onDone = {
                                     softKeyboardFocusManager.clearFocus()
@@ -165,24 +162,25 @@ class MainActivity : ComponentActivity() {
 
 
                         Button(onClick = {
-                            result = if (firstDropDownVal == "Декаден" && secDropDownVal == "Бинарен") {
-                                NumberConverter.decToBin(amount)
-                            } else if (firstDropDownVal == "Бинарен" && secDropDownVal == "Декаден") {
-                                NumberConverter.binToDec(amount)
-                            } else if (firstDropDownVal == "Декаден" && secDropDownVal == "Хексален") {
-                                NumberConverter.decToHex(amount)
-                            } else if (firstDropDownVal == "Хексален" && secDropDownVal == "Декаден") {
-                                NumberConverter.hexToDec(amount)
-                            } else if ((firstDropDownVal == "Хексален" && secDropDownVal == "Бинарен")) {
-                                NumberConverter.hexToBin(amount)
-                            } else if ((firstDropDownVal == "Бинарен" && secDropDownVal == "Хексален")) {
-                                NumberConverter.binToHex(amount)
-                            } else if ((firstDropDownVal == "Декаден" && secDropDownVal == "Октален")) {
-                                NumberConverter.decToOct(amount)
-                            } else if ((firstDropDownVal == "Октален" && secDropDownVal == "Декаден")) {
-                                NumberConverter.octToDec(amount)
-                            } else  "Одберете различни бројни системи"
-                      resultDiplay = result
+                            result =
+                                if (firstDropDownVal == "Декаден" && secDropDownVal == "Бинарен") {
+                                    NumberConverter.decToBin(amount)
+                                } else if (firstDropDownVal == "Бинарен" && secDropDownVal == "Декаден") {
+                                    NumberConverter.binToDec(amount)
+                                } else if (firstDropDownVal == "Декаден" && secDropDownVal == "Хексален") {
+                                    NumberConverter.decToHex(amount)
+                                } else if (firstDropDownVal == "Хексален" && secDropDownVal == "Декаден") {
+                                    NumberConverter.hexToDec(amount)
+                                } else if ((firstDropDownVal == "Хексален" && secDropDownVal == "Бинарен")) {
+                                    NumberConverter.hexToBin(amount)
+                                } else if ((firstDropDownVal == "Бинарен" && secDropDownVal == "Хексален")) {
+                                    NumberConverter.binToHex(amount)
+                                } else if ((firstDropDownVal == "Декаден" && secDropDownVal == "Октален")) {
+                                    NumberConverter.decToOct(amount)
+                                } else if ((firstDropDownVal == "Октален" && secDropDownVal == "Декаден")) {
+                                    NumberConverter.octToDec(amount)
+                                } else "Одберете различни бројни системи"
+                            resultDiplay = result
                         }
                         )
                         {
@@ -194,7 +192,7 @@ class MainActivity : ComponentActivity() {
 
                                 text = resultDiplay,
                             )
-                            }
+                        }
 
                         Spacer(modifier = Modifier.height(25.dp))
 
@@ -202,22 +200,5 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-    }
-
-
-}
-
-
-
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    КонвертерTheme {
-        Greeting("Android")
     }
 }

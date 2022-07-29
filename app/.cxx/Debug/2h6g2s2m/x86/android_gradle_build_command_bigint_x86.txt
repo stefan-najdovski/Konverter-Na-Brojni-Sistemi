@@ -1,0 +1,7 @@
+Executable : /Users/sn/Library/Android/sdk/cmake/3.18.1/bin/ninja
+arguments : 
+-C
+/Users/sn/Documents/Number-System-Converter/app/.cxx/Debug/2h6g2s2m/x86
+bigint
+jvmArgs : 
+

@@ -179,10 +179,9 @@ class MainActivity : ComponentActivity() {
                                 NumberConverter.binToHex(amount)
                             } else if ((firstDropDownVal == "Декаден" && secDropDownVal == "Октален")) {
                                 NumberConverter.decToOct(amount)
-                            }else if ((firstDropDownVal == "Октален" && secDropDownVal == "Декаден")) {
+                            } else if ((firstDropDownVal == "Октален" && secDropDownVal == "Декаден")) {
                                 NumberConverter.octToDec(amount)
-                            } else
-                                "Одберете различни бројни системи"
+                            } else  "Одберете различни бројни системи"
                       resultDiplay = result
                         }
                         )

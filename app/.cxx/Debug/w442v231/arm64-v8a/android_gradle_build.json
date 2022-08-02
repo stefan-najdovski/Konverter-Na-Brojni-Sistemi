@@ -1,0 +1,38 @@
+{
+  "buildFiles": [
+    "/home/stefani/Documents/GitHub/Konverter-Na-Brojni-Sistemi/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/stefani/Android/Sdk/cmake/3.18.1/bin/ninja",
+      "-C",
+      "/home/stefani/Documents/GitHub/Konverter-Na-Brojni-Sistemi/app/.cxx/Debug/w442v231/arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/home/stefani/Android/Sdk/cmake/3.18.1/bin/ninja",
+    "-C",
+    "/home/stefani/Documents/GitHub/Konverter-Na-Brojni-Sistemi/app/.cxx/Debug/w442v231/arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "bigint::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "bigint",
+      "output": "/home/stefani/Documents/GitHub/Konverter-Na-Brojni-Sistemi/app/build/intermediates/cxx/Debug/w442v231/obj/arm64-v8a/libbigint.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "/home/stefani/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+      "cppCompilerExecutable": "/home/stefani/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

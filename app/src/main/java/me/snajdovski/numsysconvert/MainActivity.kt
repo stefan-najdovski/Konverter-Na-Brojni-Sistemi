@@ -76,7 +76,7 @@ class MainActivity : ComponentActivity() {
 
                     var firstDropDownVal: String?
                     var secDropDownVal: String?
-                    var result: String = ""
+                    var result = ""
 
                     Column(
                         modifier = Modifier

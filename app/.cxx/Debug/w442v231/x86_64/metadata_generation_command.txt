@@ -1,0 +1,23 @@
+                    Executable : /home/stefani/Android/Sdk/cmake/3.18.1/bin/cmake
+arguments : 
+-H/home/stefani/Documents/GitHub/Konverter-Na-Brojni-Sistemi/app/src/main/cpp
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_SYSTEM_VERSION=23
+-DANDROID_PLATFORM=android-23
+-DANDROID_ABI=x86_64
+-DCMAKE_ANDROID_ARCH_ABI=x86_64
+-DANDROID_NDK=/home/stefani/Android/Sdk/ndk/21.4.7075529
+-DCMAKE_ANDROID_NDK=/home/stefani/Android/Sdk/ndk/21.4.7075529
+-DCMAKE_TOOLCHAIN_FILE=/home/stefani/Android/Sdk/ndk/21.4.7075529/build/cmake/android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=/home/stefani/Android/Sdk/cmake/3.18.1/bin/ninja
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/home/stefani/Documents/GitHub/Konverter-Na-Brojni-Sistemi/app/build/intermediates/cxx/Debug/w442v231/obj/x86_64
+-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=/home/stefani/Documents/GitHub/Konverter-Na-Brojni-Sistemi/app/build/intermediates/cxx/Debug/w442v231/obj/x86_64
+-DCMAKE_BUILD_TYPE=Debug
+-B/home/stefani/Documents/GitHub/Konverter-Na-Brojni-Sistemi/app/.cxx/Debug/w442v231/x86_64
+-GNinja
+jvmArgs : 
+
+
+                    Build command args: []
+                    Version: 2

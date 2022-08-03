@@ -55,11 +55,9 @@ std::string runConverter(std::string inputNumber,std::string startbase,std::stri
     std::string  number, startBase, endBase;
     number = std::move(inputNumber);
     startBase = std::move(startbase);
-    endbase = endBase;
+    endBase = std::move(endbase);
 
 
-    while (true)
-    {
       //  cout << "\n Enter the starting number: ";
       //  getline(cin, number);
         removeSpaces(number);
@@ -77,10 +75,9 @@ std::string runConverter(std::string inputNumber,std::string startbase,std::stri
         } while (endBase.empty());
 
         number = changeBase(number, startBase, endBase);
-
+        return number;
       //;  cout << "\n  = " << number << "\n";
-    }
-    return number;
+
 }
 
 
@@ -198,8 +195,7 @@ std::string changeBase(std::string startNum, std::string startBase, std::string 
 {
     Number number;
 
-    while (true)
-    {
+
         try
         {
             number.set(startNum, startBase);
@@ -212,7 +208,7 @@ std::string changeBase(std::string startNum, std::string startBase, std::string 
         {
             return exception.what();
         }
-    }
+
 
 }
 

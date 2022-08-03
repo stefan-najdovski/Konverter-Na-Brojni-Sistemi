@@ -1,0 +1,3 @@
+C:/Users/BillyG/Documents/GitHub/DontCommit-/app/.cxx/Debug/304s3i4e/x86/CMakeFiles/bigint.dir
+C:/Users/BillyG/Documents/GitHub/DontCommit-/app/.cxx/Debug/304s3i4e/x86/CMakeFiles/edit_cache.dir
+C:/Users/BillyG/Documents/GitHub/DontCommit-/app/.cxx/Debug/304s3i4e/x86/CMakeFiles/rebuild_cache.dir

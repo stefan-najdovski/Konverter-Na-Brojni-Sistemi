@@ -1,0 +1,5 @@
+# ninja log v5
+1	3257	681188736	CMakeFiles/bigint.dir/radix.cpp.o	62f908310c37a3f2
+3259	3830	681188737	C:/Users/BillyG/Documents/GitHub/DontCommit-/app/build/intermediates/cxx/Debug/304s3i4e/obj/arm64-v8a/libbigint.so	6d8bac7ee1dc9a2e
+5	1634	681194434	CMakeFiles/bigint.dir/radix.cpp.o	62f908310c37a3f2
+1635	2023	681194434	C:/Users/BillyG/Documents/GitHub/DontCommit-/app/build/intermediates/cxx/Debug/304s3i4e/obj/arm64-v8a/libbigint.so	6d8bac7ee1dc9a2e

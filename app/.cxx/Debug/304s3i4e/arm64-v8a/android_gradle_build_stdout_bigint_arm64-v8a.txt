@@ -1,0 +1,2 @@
+ninja: Entering directory `C:\Users\BillyG\Documents\GitHub\DontCommit-\app\.cxx\Debug\304s3i4e\arm64-v8a'
+ninja: no work to do.

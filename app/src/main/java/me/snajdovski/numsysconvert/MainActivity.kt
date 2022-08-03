@@ -30,6 +30,13 @@ import me.snajdovski.numsysconvert.utils.NumberConverter
 
 class MainActivity : ComponentActivity() {
 
+    companion object {
+        init {
+            System.loadLibrary("bigint")
+        }
+    }
+
+    external fun convertNumberMrCpp(number: String,startbase:String,endbase:String): String
     @OptIn(ExperimentalAnimationApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -164,13 +171,14 @@ class MainActivity : ComponentActivity() {
                         Button(onClick = {
                             result =
                                 if (firstDropDownVal == "Декаден" && secDropDownVal == "Бинарен") {
-                                    NumberConverter.decToBin(amount)
+                                   // RadixConversion.convertFloatNumberFromOneBaseToAnother((amount),10,2)
+                                    convertNumberMrCpp(amount,10.toString(),2.toString())
                                 } else if (firstDropDownVal == "Бинарен" && secDropDownVal == "Декаден") {
-                                    NumberConverter.binToDec(amount)
+                                    RadixConversion.convertFloatNumberFromOneBaseToAnother((amount),2,10)
                                 } else if (firstDropDownVal == "Декаден" && secDropDownVal == "Хексален") {
-                                    NumberConverter.decToHex(amount)
+                                    RadixConversion.convertFloatNumberFromOneBaseToAnother((amount),10,16)
                                 } else if (firstDropDownVal == "Хексален" && secDropDownVal == "Декаден") {
-                                    NumberConverter.hexToDec(amount)
+                                    RadixConversion.convertFloatNumberFromOneBaseToAnother((amount),16,10)
                                 } else if ((firstDropDownVal == "Хексален" && secDropDownVal == "Бинарен")) {
                                     NumberConverter.hexToBin(amount)
                                 } else if ((firstDropDownVal == "Бинарен" && secDropDownVal == "Хексален")) {

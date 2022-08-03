@@ -28,6 +28,138 @@ SOFTWARE.
 #include <numeric>  // accumulate
 #include <math.h>  // pow
 #include <algorithm>  // reverse
+#include <utility>
+#include <jni.h>
+
+
+
+bool removeSpaces(std::string& input)
+{
+    std::string output = "";
+    bool foundSpace = false;
+    for (char ch : input)
+    {
+        if (ch != ' ')
+            output += ch;
+        else
+            foundSpace = true;
+    }
+    if (foundSpace)
+        input = output;
+    return foundSpace;
+}
+
+
+std::string runConverter(std::string inputNumber,std::string startbase,std::string endbase)
+{
+    std::string  number, startBase, endBase;
+    number = std::move(inputNumber);
+    startBase = std::move(startbase);
+    endbase = endBase;
+
+
+    while (true)
+    {
+      //  cout << "\n Enter the starting number: ";
+      //  getline(cin, number);
+        removeSpaces(number);
+        if (number.empty())
+            return "0";
+        do {
+        //    cout << "\n Enter the starting base: ";
+           // getline(cin, startBase);
+            removeSpaces(startBase);
+        } while (startBase.empty());
+        do {
+        //    cout << "\n Enter the target base: ";
+        //    getline(cin, endBase);
+            removeSpaces(endBase);
+        } while (endBase.empty());
+
+        number = changeBase(number, startBase, endBase);
+
+      //;  cout << "\n  = " << number << "\n";
+    }
+    return number;
+}
+
+
+std::wstring jstr2wsz(JNIEnv *env, jstring string)
+{
+    std::wstring wStr;
+    if (string == NULL)
+    {
+        return wStr; // empty string
+    }
+
+    try
+    {
+        const jchar *raw = env->GetStringChars(string, NULL);
+        if (raw != NULL)
+        {
+            jsize len = env->GetStringLength(string);
+            wStr.assign(raw, raw + len);
+            env->ReleaseStringChars(string, raw);
+        }
+    }
+    catch (const std::exception ex)
+    {
+        std::cout << "EXCEPTION in jstr2wsz translating string input " << string << std::endl;
+        std::cout << "exception: " << ex.what() << std::endl;
+    }
+    return wStr;
+}
+
+// std::wstring to jstring
+jstring wsz2jstr(JNIEnv *env, const std::string& cstr) {
+    jstring result = nullptr;
+    try {
+        int len = cstr.size();
+        auto *raw = new jchar[len];
+        memcpy(raw, cstr.c_str(), len * sizeof(wchar_t));
+        result = env->NewString(raw, len);
+        delete[] raw;
+        return result;
+    }
+    catch (const std::exception ex) {
+     //   std::wcout << L"EXCEPTION in wsz2jstr translating string input " << cstr << std::endl;
+        std::cout << "exception: " << ex.what() << std::endl;
+    }
+    return result;
+}
+
+
+extern "C"
+JNIEXPORT jstring JNICALL
+Java_me_snajdovski_numsysconvert_MainActivity_convertNumberMrCpp(JNIEnv *env, jobject thiz,
+                                                                                          jstring number, jstring startbase,
+                                                                                          jstring endbase) {
+
+    jboolean isCopyOfNumber;
+    const char *convertedNumber = (env)->GetStringUTFChars(number, &isCopyOfNumber);
+    std::string strNumber = convertedNumber;
+
+    jboolean isCopyOfStartBase;
+    const char *convertedStartBase = (env)->GetStringUTFChars(startbase, &isCopyOfStartBase);
+    std::string strStartBase = convertedStartBase;
+
+
+    jboolean isCopyOfEndBase;
+    const char *ConvertedEndBase = (env)->GetStringUTFChars(endbase, &isCopyOfEndBase);
+    std::string strEndBase = ConvertedEndBase;
+
+
+    std::string result;
+    std:: string convertedResult;
+   result = runConverter(strNumber,strStartBase,strEndBase);
+
+
+        return  wsz2jstr(env,result);
+}
+
+
+
+
 
 void settings::setStandardDigits(std::string newStandardDigits)
 {
@@ -81,6 +213,7 @@ std::string changeBase(std::string startNum, std::string startBase, std::string 
             return exception.what();
         }
     }
+
 }
 
 bool isInteger(std::string input)
@@ -653,3 +786,13 @@ std::string Number::toString()
 
     return temp;
 }
+
+
+/*
+extern "C"
+JNIEXPORT jstring JNICALL
+Java_me_snajdovski_numsysconvert_MainActivity_ConvertNumberMrCpp(JNIEnv *env, jobject thiz,
+                                                                 jstring number, jstring startbase,
+                                                                 jstring endbase) {
+    // TODO: implement ConvertNumberMrCpp()
+}*/

@@ -1,7 +1,0 @@
-Executable : C:\Users\BillyG\AppData\Local\Android\Sdk\cmake\3.18.1\bin\ninja.exe
-arguments : 
--C
-C:\Users\BillyG\Documents\GitHub\DontCommit-\app\.cxx\Debug\304s3i4e\armeabi-v7a
-bigint
-jvmArgs : 
-

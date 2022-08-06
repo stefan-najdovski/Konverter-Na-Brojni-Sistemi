@@ -1,3 +1,0 @@
-C:/Users/BillyG/Documents/GitHub/DontCommit-/app/.cxx/Debug/304s3i4e/armeabi-v7a/CMakeFiles/bigint.dir
-C:/Users/BillyG/Documents/GitHub/DontCommit-/app/.cxx/Debug/304s3i4e/armeabi-v7a/CMakeFiles/edit_cache.dir
-C:/Users/BillyG/Documents/GitHub/DontCommit-/app/.cxx/Debug/304s3i4e/armeabi-v7a/CMakeFiles/rebuild_cache.dir

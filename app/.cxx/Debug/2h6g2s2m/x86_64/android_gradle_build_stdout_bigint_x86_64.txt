@@ -1,2 +1,0 @@
-ninja: Entering directory `/Users/sn/Documents/Number-System-Converter/app/.cxx/Debug/2h6g2s2m/x86_64'
-ninja: no work to do.

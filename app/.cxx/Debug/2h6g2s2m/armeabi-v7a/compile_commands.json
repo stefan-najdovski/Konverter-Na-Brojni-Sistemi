@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/Users/sn/Documents/Number-System-Converter/app/.cxx/Debug/2h6g2s2m/armeabi-v7a",
-  "command": "/Users/sn/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=armv7-none-linux-androideabi23 --gcc-toolchain=/Users/sn/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/sn/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dbigint_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC -o CMakeFiles/bigint.dir/Big_Int.cpp.o -c /Users/sn/Documents/Number-System-Converter/app/src/main/cpp/Big_Int.cpp",
-  "file": "/Users/sn/Documents/Number-System-Converter/app/src/main/cpp/Big_Int.cpp"
-}
-]

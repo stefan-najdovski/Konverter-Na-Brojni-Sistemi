@@ -1,3 +1,0 @@
-ninja: Entering directory `/home/stefani/Documents/GitHub/Konverter-Na-Brojni-Sistemi/app/.cxx/Debug/w442v231/arm64-v8a'
-[1/2] Building CXX object CMakeFiles/bigint.dir/radix.cpp.o
-[2/2] Linking CXX shared library /home/stefani/Documents/GitHub/Konverter-Na-Brojni-Sistemi/app/build/intermediates/cxx/Debug/w442v231/obj/arm64-v8a/libbigint.so

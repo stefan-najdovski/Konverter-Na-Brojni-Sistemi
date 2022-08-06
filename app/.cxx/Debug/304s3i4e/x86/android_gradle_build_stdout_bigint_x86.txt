@@ -1,3 +1,0 @@
-ninja: Entering directory `C:\Users\BillyG\Documents\GitHub\DontCommit-\app\.cxx\Debug\304s3i4e\x86'
-[1/2] Building CXX object CMakeFiles/bigint.dir/radix.cpp.o
-[2/2] Linking CXX shared library C:\Users\BillyG\Documents\GitHub\DontCommit-\app\build\intermediates\cxx\Debug\304s3i4e\obj\x86\libbigint.so

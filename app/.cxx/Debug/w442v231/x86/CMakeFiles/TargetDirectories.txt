@@ -1,3 +1,0 @@
-/home/stefani/Documents/GitHub/Konverter-Na-Brojni-Sistemi/app/.cxx/Debug/w442v231/x86/CMakeFiles/rebuild_cache.dir
-/home/stefani/Documents/GitHub/Konverter-Na-Brojni-Sistemi/app/.cxx/Debug/w442v231/x86/CMakeFiles/edit_cache.dir
-/home/stefani/Documents/GitHub/Konverter-Na-Brojni-Sistemi/app/.cxx/Debug/w442v231/x86/CMakeFiles/bigint.dir

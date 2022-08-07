@@ -145,10 +145,10 @@ class MainActivity : ComponentActivity() {
                                 amount = it
                             },
                             label = {
-                                Text(text = "Внесете ја вредноста", color = Color.White)
+                                Text(text = "Внесете ја вредноста", color = Color.Gray)
                             },
                             placeholder = {
-                                Text(text = "Пример 66F")
+                                Text(text = "0")
                             },
                             singleLine = true,
                             keyboardOptions = KeyboardOptions(
@@ -166,44 +166,38 @@ class MainActivity : ComponentActivity() {
                         Spacer(modifier = Modifier.height(20.dp))
 
 
-
+                        //TO:DO Optimize this Monster
                         Button(onClick = {
                             result =
                                 if (firstDropDownVal == "Декаден" && secDropDownVal == "Бинарен") {
-                                   // RadixConversion.convertFloatNumberFromOneBaseToAnother((amount),10,2)
                                     convertNumberMrCpp(amount,"10","2")
                                 } else if (firstDropDownVal == "Бинарен" && secDropDownVal == "Декаден") {
-                                  //  RadixConversion.convertFloatNumberFromOneBaseToAnother((amount),2,10)
                                     convertNumberMrCpp(amount,"2","10")
                                 } else if (firstDropDownVal == "Декаден" && secDropDownVal == "Хексален") {
-                                   // RadixConversion.convertFloatNumberFromOneBaseToAnother((amount),10,16)
                                     convertNumberMrCpp(amount,"10","16")
                                 } else if (firstDropDownVal == "Хексален" && secDropDownVal == "Декаден") {
                                     convertNumberMrCpp(amount,"16","10")
-                                //    RadixConversion.convertFloatNumberFromOneBaseToAnother((amount),16,10)
                                 } else if ((firstDropDownVal == "Хексален" && secDropDownVal == "Бинарен")) {
                                     convertNumberMrCpp(amount,"16","2")
-                                  //  NumberConverter.hexToBin(amount)
                                 } else if ((firstDropDownVal == "Бинарен" && secDropDownVal == "Хексален")) {
                                     convertNumberMrCpp(amount,"2","16")
-                                  //  NumberConverter.binToHex(amount)
                                 } else if ((firstDropDownVal == "Декаден" && secDropDownVal == "Октален")) {
                                     convertNumberMrCpp(amount,"10","8")
-                                   // NumberConverter.decToOct(amount)
                                 } else if ((firstDropDownVal == "Октален" && secDropDownVal == "Декаден")) {
-                                    convertNumberMrCpp(amount,"8","1")
-                                 //   NumberConverter.octToDec(amount)
-                                }   else if ((firstDropDownVal == "Октален" && secDropDownVal == "Хексален")) {
-                        convertNumberMrCpp(amount,"8","16")
-                        //   NumberConverter.octToDec(amount)
-                    }else if ((firstDropDownVal == "Хексален" && secDropDownVal == "Октален")) {
+                                    convertNumberMrCpp(amount,"8","10")
+                                } else if ((firstDropDownVal == "Октален" && secDropDownVal == "Хексален")) {
+                                  convertNumberMrCpp(amount,"8","16")
+                                } else if ((firstDropDownVal == "Хексален" && secDropDownVal == "Октален")) {
                                     convertNumberMrCpp(amount,"16","8")
-                                    //   NumberConverter.octToDec(amount)
-                                }
-
-
-
-                                else "Одберете различни бројни системи"
+                                } else if ((firstDropDownVal == "Октален" && secDropDownVal == "Бинарен")) {
+                                    convertNumberMrCpp(amount,"8","2")
+                                } else if ((firstDropDownVal == "Бинарен" && secDropDownVal == "Октален")) {
+                                    convertNumberMrCpp(amount,"2","8")
+                                } else if ((firstDropDownVal == "Октален" && secDropDownVal == "Хексален")) {
+                                    convertNumberMrCpp(amount,"8","16")
+                                } else if ((firstDropDownVal == "Хексален" && secDropDownVal == "Октален")) {
+                                    convertNumberMrCpp(amount,"16","8")
+                                } else "Одберете различни бројни системи"
                             resultDiplay = result
                         }
                         )

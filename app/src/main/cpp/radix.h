@@ -33,7 +33,7 @@ SOFTWARE.
 
 namespace settings
 {
-    static std::string standardDigits = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    static std::string standardDigits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const std::string DEFAULT_STANDARD_DIGITS = standardDigits;
     const std::string RESERVED_DIGITS = ".,- ";
     static int resultPrecision = 75;
@@ -56,7 +56,7 @@ std::string changeBase(std::string, std::string, std::string);
 bool isInteger(std::string);
 void assertInteger(std::string);
 int charToInt(char);
-Vectors splitNumeralsString(const std::string);
+Vectors splitNumeralsString(const std::string&);
 void strToInts(const std::string, std::vector<int>&, int&, int&);
 Vectors splitString(std::string);
 int lcm(int, int);

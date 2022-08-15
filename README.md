@@ -69,7 +69,7 @@ See `LICENSE.txt` for more information.
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments (Thank you FOSS people)
 
-* [Radix Converter](https://github.com/wheelercj/Radix-Converter)
+* Thanks Chris Wheeler for [Radix Converter](https://github.com/wheelercj/Radix-Converter), (modified to work with Android),
 * Google Material Icon (swap-horiz) for logo.
 * [Awesome Readme](https://github.com/othneildrew/Best-README-Template)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

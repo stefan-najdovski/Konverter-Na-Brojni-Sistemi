@@ -11,7 +11,7 @@
   <h3 align="center">Конвертер на Бројни Системи</h3>
 
   <p align="center">
-   Едонставна и минимална апликација за конверзија!
+   Едонставна и минимална апликација за конверзија на бројни системи.
     <br />
     <br />
     <a href="https://github.com/stefan-najdovski/Konverter-Na-Brojni-Sistemi/releases/download/RC-Stable/app-release.apk">Demo APK</a>

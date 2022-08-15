@@ -68,7 +68,7 @@ See `LICENSE.txt` for more information.
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+## Acknowledgments (Thank you FOSS people)
 
 * [Radix Converter](https://github.com/wheelercj/Radix-Converter)
 * Google Material Icon (swap-horiz) for logo.

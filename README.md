@@ -1,5 +1,7 @@
 <a name="#readme-top"></a>
 
+[![Issues][issues-shield]][issues-url]
+[![ GPL-3.0 License][license-shield]][license-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -74,3 +76,10 @@ See `LICENSE.txt` for more information.
 * Google Material Icon (swap-horiz) for logo.
 * [Awesome Readme](https://github.com/othneildrew/Best-README-Template)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+[license-url]: https://github.com/stefan-najdovski//Konverter-Na-Brojni-Sistemi//blob/master/LICENSE.txt
+[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
+[issues-url]: https://github.com/stefan-najdovski/Konverter-Na-Brojni-Sistemi/issues
+

@@ -50,7 +50,7 @@
 ## Roadmap
 
 - [x] First Release.
-- [] Translation to English.
+- [ ] Translation to English.
 
 
 

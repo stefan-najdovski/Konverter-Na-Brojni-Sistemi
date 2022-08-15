@@ -165,42 +165,27 @@ class MainActivity : ComponentActivity() {
                         )
                         Spacer(modifier = Modifier.height(20.dp))
 
-
                         //TO:DO Optimize this Monster
                         Button(onClick = {
-                            result =
-                                if (firstDropDownVal == "Декаден" && secDropDownVal == "Бинарен") {
-                                    convertNumberMrCpp(amount,"10","2")
-                                } else if (firstDropDownVal == "Бинарен" && secDropDownVal == "Декаден") {
-                                    convertNumberMrCpp(amount,"2","10")
-                                } else if (firstDropDownVal == "Декаден" && secDropDownVal == "Хексален") {
-                                    convertNumberMrCpp(amount,"10","16")
-                                } else if (firstDropDownVal == "Хексален" && secDropDownVal == "Декаден") {
-                                    convertNumberMrCpp(amount,"16","10")
-                                } else if ((firstDropDownVal == "Хексален" && secDropDownVal == "Бинарен")) {
-                                    convertNumberMrCpp(amount,"16","2")
-                                } else if ((firstDropDownVal == "Бинарен" && secDropDownVal == "Хексален")) {
-                                    convertNumberMrCpp(amount,"2","16")
-                                } else if ((firstDropDownVal == "Декаден" && secDropDownVal == "Октален")) {
-                                    convertNumberMrCpp(amount,"10","8")
-                                } else if ((firstDropDownVal == "Октален" && secDropDownVal == "Декаден")) {
-                                    convertNumberMrCpp(amount,"8","10")
-                                } else if ((firstDropDownVal == "Октален" && secDropDownVal == "Хексален")) {
-                                  convertNumberMrCpp(amount,"8","16")
-                                } else if ((firstDropDownVal == "Хексален" && secDropDownVal == "Октален")) {
-                                    convertNumberMrCpp(amount,"16","8")
-                                } else if ((firstDropDownVal == "Октален" && secDropDownVal == "Бинарен")) {
-                                    convertNumberMrCpp(amount,"8","2")
-                                } else if ((firstDropDownVal == "Бинарен" && secDropDownVal == "Октален")) {
-                                    convertNumberMrCpp(amount,"2","8")
-                                } else if ((firstDropDownVal == "Октален" && secDropDownVal == "Хексален")) {
-                                    convertNumberMrCpp(amount,"8","16")
-                                } else if ((firstDropDownVal == "Хексален" && secDropDownVal == "Октален")) {
-                                    convertNumberMrCpp(amount,"16","8")
-                                } else "Одберете различни бројни системи"
+                            result = (
+                                    convertNumberMrCpp(amount,
+                                        when(firstDropDownVal){
+                                        "Декаден" -> 10.toString()
+                                        "Бинарен" -> 2.toString()
+                                        "Октален" -> 8.toString()
+                                        "Хексален" -> 16.toString()
+                                        else -> {""}
+                                    },
+                                        when(secDropDownVal){
+                                        "Декаден" -> 10.toString()
+                                        "Бинарен" -> 2.toString()
+                                        "Октален" -> 8.toString()
+                                        "Хексален" -> 16.toString()
+                                        else -> {""}
+                                    }
+                                    ))
                             resultDiplay = result
-                        }
-                        )
+                        })
                         {
                             Text(text = "Конвертирај", color = Color.White)
                         }
@@ -213,10 +198,10 @@ class MainActivity : ComponentActivity() {
                         }
 
                         Spacer(modifier = Modifier.height(25.dp))
-
                     }
                 }
             }
         }
     }
+
 }

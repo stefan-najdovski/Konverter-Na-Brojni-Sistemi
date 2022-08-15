@@ -49,7 +49,8 @@
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] First Release
+- [x] First Release.
+- [] Translation to English.
 
 
 

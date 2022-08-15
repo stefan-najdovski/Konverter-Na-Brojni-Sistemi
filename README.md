@@ -11,7 +11,7 @@
   <h3 align="center">Конвертер на Бројни Системи</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+   Едонставна и минимална апликација за конверзија!
     <br />
     <br />
     <a href="https://github.com/stefan-najdovski/Konverter-Na-Brojni-Sistemi/releases/download/RC-Stable/app-release.apk">Demo APK</a>

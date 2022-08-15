@@ -36,7 +36,7 @@ namespace settings
     static std::string standardDigits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const std::string DEFAULT_STANDARD_DIGITS = standardDigits;
     const std::string RESERVED_DIGITS = ".,- ";
-    static int resultPrecision = 75;
+    static int resultPrecision = 16;
     const int DEFAULT_RESULT_PRECISION = resultPrecision;
 
     void setStandardDigits(std::string);

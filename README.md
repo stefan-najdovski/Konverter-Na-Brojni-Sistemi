@@ -28,9 +28,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-   <img src="https://raw.githubusercontent.com/stefan-najdovski/Konverter-Na-Brojni-Sistemi/main/Screeenshots/phone1.png" alt="screenshot1" width="100">
-  <img src="https://raw.githubusercontent.com/stefan-najdovski/Konverter-Na-Brojni-Sistemi/main/Screeenshots/phone2.png" alt="screenshot2" width="100">
-  <img src="https://raw.githubusercontent.com/stefan-najdovski/Konverter-Na-Brojni-Sistemi/main/Screeenshots/tablet" alt="screenshot3" width="100">
+   <img src="https://raw.githubusercontent.com/stefan-najdovski/Konverter-Na-Brojni-Sistemi/main/Screeenshots/phone1.png" alt="screenshot1" width="300">
+  <img src="https://raw.githubusercontent.com/stefan-najdovski/Konverter-Na-Brojni-Sistemi/main/Screeenshots/phone2.png" alt="screenshot2" width="300">
+  <img src="https://raw.githubusercontent.com/stefan-najdovski/Konverter-Na-Brojni-Sistemi/main/Screeenshots/tablet.png" alt="screenshot3" width="300">
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 

@@ -27,7 +27,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
+* Конвертер за бројни системи, кој подржува до 16 децимални места.
+* Може да се конвертираат: Децимални, Бинарни, Хексални, Октални броеви.                                                                                   
    <img src="https://raw.githubusercontent.com/stefan-najdovski/Konverter-Na-Brojni-Sistemi/main/Screeenshots/phone1.png" alt="screenshot1" width="300">
   <img src="https://raw.githubusercontent.com/stefan-najdovski/Konverter-Na-Brojni-Sistemi/main/Screeenshots/phone2.png" alt="screenshot2" width="300">
   <img src="https://raw.githubusercontent.com/stefan-najdovski/Konverter-Na-Brojni-Sistemi/main/Screeenshots/tablet.png" alt="screenshot3" width="300">
